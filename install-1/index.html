@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Testing Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <h2>{{ title }}</h2>
+      <a :href="url">Link To Facebook</a>
+      <input type="text" v-model="message">
+      <h3>{{ message }}</h3>
+      <button @click="save">Save</button>
+    </div>
+  </body>
+  <script>
+    var app = new Vue({
+      el : '.app',
+      data : {
+        title : 'Halo Vue',
+        url : 'http://facebook.com',
+        message : ''
+      },
+      methods : {
+        save : function(){
+          this.title='Save Me'
+        }
+      }
+    })
+
+    var app2 = new Vue({
+      el : '#app2',
+      data : {
+
+      }
+    })
+  </script>
+</html>
